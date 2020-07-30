@@ -7,6 +7,15 @@
         android:layout_height="match_parent"
         tools:context="com.rompos.idscan.app.SplashscreenActivity">
 
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="215dp"
+            android:layout_height="455dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.496" app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/app_logo"/>
     <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
