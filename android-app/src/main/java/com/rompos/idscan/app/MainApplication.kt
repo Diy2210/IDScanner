@@ -1,9 +1,7 @@
-// MOVE:APP_ID
-
-package org.example.app // REPLACE:org.example.app:APP_ID
+package com.rompos.idscan.app
 
 import android.app.Application
-import org.example.mpp.App
+import com.rompos.idscan.mpp.App
 
 class MainApplication : Application() {
     override fun onCreate() {

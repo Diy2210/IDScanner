@@ -1,8 +1,11 @@
-/*
- * Copyright 2019 IceRock MAG Inc. Use of this source code is governed by the Apache 2.0 license.
- */
-
 object Versions {
+
+    object App {
+        const val namespace = "com.rompos.idscan.app"
+        const val version = 1
+        const val versionCode = "1.0"
+    }
+
     object Android {
         const val compileSdk = 28
         const val targetSdk = 28

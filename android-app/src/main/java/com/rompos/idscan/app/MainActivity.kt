@@ -1,6 +1,4 @@
-// MOVE:APP_ID
-
-package org.example.app // REPLACE:org.example.app:APP_ID
+package com.rompos.idscan.app
 
 import dev.icerock.moko.widgets.screen.BaseApplication
 import dev.icerock.moko.widgets.screen.HostActivity

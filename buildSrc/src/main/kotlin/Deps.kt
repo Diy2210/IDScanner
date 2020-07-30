@@ -131,6 +131,9 @@ object Deps {
                 iosX64 = "com.github.aakira:napier-iosX64:${Versions.Libs.MultiPlatform.napier}",
                 iosArm64 = "com.github.aakira:napier-iosArm64:${Versions.Libs.MultiPlatform.napier}"
             )
+            val lifecycle = MultiPlatformLibrary(
+                android = "androidx.lifecycle:lifecycle-extensions:${Versions.Libs.Android.lifecycle}"
+            )
         }
     }
 

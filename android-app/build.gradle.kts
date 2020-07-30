@@ -55,7 +55,7 @@ dependencies {
 }
 
 multiplatformUnits {
-    classesPackage = "org.example.app" // REPLACE:org.example.app:APP_ID
-    dataBindingPackage = "org.example.app" // REPLACE:org.example.app:APP_ID
+    classesPackage = Versions.App.namespace
+    dataBindingPackage = Versions.App.namespace
     layoutsSourceSet = "main"
 }

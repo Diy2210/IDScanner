@@ -1,7 +1,3 @@
-/*
- * Copyright 2019 IceRock MAG Inc. Use of this source code is governed by the Apache 2.0 license.
- */
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.multiplatform")
@@ -20,7 +16,12 @@ android {
 
 val mppLibs = listOf(
     Deps.Libs.MultiPlatform.mokoResources,
-    Deps.Libs.MultiPlatform.mokoWidgets
+    Deps.Libs.MultiPlatform.mokoWidgets,
+    Deps.Libs.MultiPlatform.kotlinStdLib,
+    Deps.Libs.MultiPlatform.coroutines,
+    Deps.Libs.MultiPlatform.ktorClient,
+    Deps.Libs.MultiPlatform.serialization,
+    Deps.Libs.MultiPlatform.lifecycle
 )
 
 setupFramework(
@@ -28,14 +29,9 @@ setupFramework(
 )
 
 dependencies {
-    mppLibrary(Deps.Libs.MultiPlatform.kotlinStdLib)
-    mppLibrary(Deps.Libs.MultiPlatform.coroutines)
-
-    androidLibrary(Deps.Libs.Android.lifecycle)
-
     mppLibs.forEach { mppLibrary(it) }
 }
 
 multiplatformResources {
-    multiplatformResourcesPackage = "org.example.library"
+    multiplatformResourcesPackage = "${Versions.App.namespace}.library"
 }

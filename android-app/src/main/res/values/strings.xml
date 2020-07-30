@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- REPLACE:moko-app:APP_DISPLAY_NAME -->
-    <string name="app_name">moko-app</string>
+    <string name="app_name">IDScanner</string>
 </resources>
