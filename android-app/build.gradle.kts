@@ -38,18 +38,23 @@ android {
 }
 
 val depLibs = listOf(
-    Deps.Libs.Android.kotlinStdLib.name,
-    Deps.Libs.Android.appCompat.name,
-    Deps.Libs.Android.material.name,
-    Deps.Libs.Android.recyclerView.name,
-    Deps.Libs.Android.appCompat.name,
-    Deps.Libs.Android.constraintLayout.name,
-    Deps.Libs.MultiPlatform.napier.android!!,
-    project(":mpp-library")
+        Deps.Libs.Android.kotlinStdLib.name,
+        Deps.Libs.Android.appCompat.name,
+        Deps.Libs.Android.material.name,
+        Deps.Libs.Android.recyclerView.name,
+        Deps.Libs.Android.appCompat.name,
+        Deps.Libs.Android.constraintLayout.name,
+//    Deps.Libs.Android.blinkid,
+        Deps.Libs.MultiPlatform.napier.android !!,
+        project(":mpp-library")
 )
 
 dependencies {
     depLibs.forEach { implementation(it) }
+
+    implementation ("androidx.appcompat:appcompat:1.1.0")
+    implementation ("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation ("com.github.BlinkID:blinkid-ui-android:v4.11.1.3")
 }
 
 multiplatformUnits {

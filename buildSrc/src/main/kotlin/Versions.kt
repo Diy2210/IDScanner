@@ -37,6 +37,7 @@ object Versions {
             const val constraintLayout = "1.1.3"
             const val lifecycle = "2.0.0"
             const val recyclerView = "1.0.0"
+            const val blinkid = "4.11.1.3"
         }
 
         object MultiPlatform {

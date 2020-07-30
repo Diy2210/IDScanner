@@ -38,6 +38,9 @@ object Deps {
             val lifecycle = AndroidLibrary(
                 name = "androidx.lifecycle:lifecycle-extensions:${Versions.Libs.Android.lifecycle}"
             )
+            val blinkid = AndroidLibrary(
+                name = "com.github.BlinkID:blinkid-ui-android:${Versions.Libs.Android.blinkid}"
+            )
         }
 
         object MultiPlatform {

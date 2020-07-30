@@ -1,6 +1,7 @@
 package com.rompos.idscan.app
 
 import android.app.Application
+import com.microblink.MicroblinkSDK
 import com.rompos.idscan.mpp.App
 
 class MainApplication : Application() {
@@ -8,6 +9,8 @@ class MainApplication : Application() {
         super.onCreate()
 
         mppApplication = App().apply { initialize() }
+
+        MicroblinkSDK.setLicenseKey(getString(R.string.app_token), this)
     }
 
     companion object {
