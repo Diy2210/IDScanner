@@ -14,16 +14,11 @@ android {
     defaultConfig {
         minSdkVersion(Versions.Android.minSdk)
         targetSdkVersion(Versions.Android.targetSdk)
-
-        applicationId = "org.example.app" // REPLACE:org.example.app:APP_ID
-
-        versionCode = 1
-        versionName = "0.1.0"
-
+        applicationId = Versions.App.namespace
+        versionCode = Versions.App.version
+        versionName = Versions.App.versionCode
         vectorDrawables.useSupportLibrary = true
-
-        val url = "https://newsapi.org/v2/"
-        buildConfigField("String", "BASE_URL", "\"$url\"")
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -42,16 +37,19 @@ android {
     }
 }
 
+val depLibs = listOf(
+    Deps.Libs.Android.kotlinStdLib.name,
+    Deps.Libs.Android.appCompat.name,
+    Deps.Libs.Android.material.name,
+    Deps.Libs.Android.recyclerView.name,
+    Deps.Libs.Android.appCompat.name,
+    Deps.Libs.Android.constraintLayout.name,
+    Deps.Libs.MultiPlatform.napier.android!!,
+    project(":mpp-library")
+)
+
 dependencies {
-    implementation(Deps.Libs.Android.kotlinStdLib.name)
-
-    implementation(Deps.Libs.Android.appCompat.name)
-    implementation(Deps.Libs.Android.material.name)
-    implementation(Deps.Libs.Android.recyclerView.name)
-
-    implementation(Deps.Libs.MultiPlatform.napier.android!!)
-
-    implementation(project(":mpp-library"))
+    depLibs.forEach { implementation(it) }
 }
 
 multiplatformUnits {

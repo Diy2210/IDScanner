@@ -5,4 +5,11 @@
         <item name="colorPrimaryDark">#FF087f23</item>
         <item name="colorAccent">#FF80e27e</item>
     </style>
+
+    // No Action Bar
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>

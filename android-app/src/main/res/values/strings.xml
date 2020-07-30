@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">IDScanner</string>
+    <string name="all_rights_reserved">All rights reserved</string>
 </resources>
